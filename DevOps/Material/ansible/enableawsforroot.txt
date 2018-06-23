@@ -1,0 +1,29 @@
+login ec2
+#sudo su
+
+reset root password
+#passwd
+root1234
+
+enable root login
+vi /etc/ssh/sshd_config
+
+edit this line
+PermitRootLogin yes
+PasswordAuthentication yes
+
+/etc/init.d/rhnsd restart
+
+
+open below file and enable access to root
+sudo visudo
+
+
+
+-------------
+install ansible
+-------------------------
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum update
+
+yum install ansible
